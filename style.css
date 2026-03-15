@@ -75,6 +75,7 @@ section {
     border-radius: 6px;
     padding: 20px;
     margin-bottom: 20px;
+    animation: sobe 2.5s ease;
 }
 
 section h2 {
@@ -103,6 +104,10 @@ section p {
     border-radius: 5px;
     border: 2px solid #ccc;
     text-align: center;
+}
+
+.card:hover{
+    animation: pulsa 1.5s ease;
 }
 
 .card1 { background: #caf0f8; border-color: #00b4d8; }
@@ -139,4 +144,15 @@ footer {
 
 footer span {
     color: #f0c040;
+}
+
+@keyframes pulsa {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes sobe {
+    from { transform: translateY(400px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
 }
