@@ -1,0 +1,120 @@
+/* box-sizing aplicado */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr auto;
+}
+
+/* cabeçalho fixo */
+header {
+    grid-area: header;
+    top: 0;
+    height: 60px;
+    background: #1a1a2e;
+    color: #f0c040;
+    text-align: center;
+    border-bottom: 4px solid #f0c040;
+    z-index: 100;
+    font-size: 1.2rem;
+    line-height: 60px;
+}
+
+/* menu lateral */
+aside {
+    grid-area: sidebar;
+    background: #1a1a2e;
+    border-right: 4px solid #f0c040;
+    padding: 20px;
+}
+
+aside h3 {
+    color: #f0c040;
+    margin-bottom: 12px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    margin: 8px 0;
+    color: #cccccc;
+    padding: 6px 8px;
+    border-left: 3px solid transparent;
+}
+
+/* conteúdo principal */
+main {
+    min-height: 100%;
+    grid-area: main;
+    padding: 30px;
+}
+
+section {
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #1a1a2e;
+    border-bottom: 2px solid #f0c040;
+    padding-bottom: 6px;
+}
+
+section p {
+    color: #555;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* cards */
+.cards {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.card {
+    flex: 1;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    text-align: center;
+}
+
+.card1 { background: #caf0f8; border-color: #00b4d8; }
+.card2 { background: #e1ffe4; border-color: #80c9a0; }
+.card3 { background: #e1ecff; border-color: #90a8f4; }
+
+/* Rodapé */
+footer {
+  grid-area: footer; /* posiciona no grid */
+  background: #1a1a2e;
+  color: #aaa;
+  border-top: 4px solid #f0c040;
+  text-align: center;
+  padding: 18px 20px;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+footer span {
+    color: #f0c040;
+}
